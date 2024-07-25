@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url('uploadimg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        text-shadow: 3px 3px 3px black;
+        margin-bottom: 2rem;
+      }
+
+      form {
+        width: 320px;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #07ffff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      input[type='file'] {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 1rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 2px solid #07ffff;
+        border-radius: 5px;
+      }
+
+      input[type='submit'] {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        background-color: #07ffff;
+        color: gray;
+        border: none;
+        border-radius: 2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type='submit']:hover {
+        background-color: #4dd9d9;
+      }
+
+      button[name='view files'] {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        background-color: #07ffff;
+        color: gray;
+        border: none;
+        border-radius: 2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      button[name='view files']:hover {
+        background-color: #4dd9d9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Main Page</h1>
+    <form action="./upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
+    <form method="get" action="./list">
+      <button name="view files">VIEW FILES</button>
+    </form>
+  </body>
+</html>
